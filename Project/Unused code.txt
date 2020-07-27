@@ -1,0 +1,531 @@
+
+//          UNUSED CODE          //
+
+
+//void CreatingHistoryButton()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	bar(c_HistoryButtonPosittionX, c_TextBoxPositionY, c_HistoryButtonPosittionX + c_TextBoxDimensionY, c_TextBoxPositionY + c_TextBoxDimensionY);
+//
+//	setcolor(WHITE);
+//	//outtextxy(c_HistoryButtonPosittionX - c_ResetButtonDistance - (c_TextBoxDimensionY - c_ResetButtonDistance * 2) / 2, c_TextBoxPositionY + 42, "H");
+//
+//	rectangle(c_HistoryButtonPosittionX - 1, c_TextBoxPositionY - 1, c_HistoryButtonPosittionX + c_TextBoxDimensionY + 1, c_TextBoxPositionY + c_TextBoxDimensionY + 1);
+//}
+
+//if (character == 8)
+//{
+//	if (startingPosition >= c_HalfWidth - c_TextBoxDimensionX + 50)
+//	{
+//		startingPosition -= 25;
+//		bgiout << ' ';
+//		outstreamxy(startingPosition, c_TextBoxPositionY + 42);
+//
+//		visibleListOfCharacters.erase(visibleListOfCharacters.size() - 1, 1);
+//
+//		if (currentPossitionOfCharacter != 0)
+//		{
+//			currentPossitionOfCharacter--;
+//			currentListOfCharacters[currentPossitionOfCharacter] = '\0';
+//		}
+//	}
+//}
+//else
+//{
+//	if (startingPosition <= c_HalfWidth + c_TextBoxDimensionX - 25)
+//	{
+//		bgiout << character;
+//		outstreamxy(startingPosition, c_TextBoxPositionY + 42);
+//		startingPosition += 25;
+//
+//		visibleListOfCharacters += character;
+//
+//		currentListOfCharacters[currentPossitionOfCharacter] = character;
+//		currentPossitionOfCharacter++;
+//	}
+//	else
+//	{
+//		visibleListOfCharacters += character;
+//		visibleListOfCharacters.erase(0, 1);
+//		bgiout << visibleListOfCharacters;
+//		outstreamxy(c_HalfWidth, c_TextBoxPositionY + 42);
+//
+//		currentListOfCharacters[currentPossitionOfCharacter] = character;
+//		currentPossitionOfCharacter++;
+//	}
+//}
+
+//void CreatingResetButton()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	//bar(c_HalfWidth + c_TextBoxDimensionX + c_QuitButtonDistance, c_TextBoxPositionY, 
+//	c_HalfWidth + c_TextBoxDimensionX + c_TextBoxDimensionY + c_QuitButtonDistance, c_TextBoxPositionY + c_TextBoxDimensionY);
+//	//bar(c_ResetButtonPosittionX, c_TextBoxPositionY, c_ResetButtonPosittionX + c_TextBoxDimensionY, c_TextBoxPositionY + c_TextBoxDimensionY);
+//
+//	setcolor(WHITE);
+//	//outtextxy(c_ResetButtonPosittionX - c_ResetButtonDistance + (c_TextBoxDimensionY + c_ResetButtonDistance * 2) / 2, c_TextBoxPositionY + 42, "R");
+//	readimagefile("ResetButton (Edited).jpg", c_ResetButtonPosittionX, c_TextBoxPositionY, c_ResetButtonPosittionX + c_TextBoxDimensionY, c_TextBoxPositionY + c_TextBoxDimensionY);
+//
+//	//rectangle(c_ResetButtonPosittionX - 1, c_TextBoxPositionY - 1, c_ResetButtonPosittionX + c_TextBoxDimensionY + 1, c_TextBoxPositionY + c_TextBoxDimensionY + 1);
+//}
+
+//bool CheckingMouseClickPositionValidationForTextBox(int positionX, int positionY)
+//{
+//	return (positionX > c_HalfWidth - c_TextBoxDimensionX) && (positionY > c_TextBoxPositionY)
+//		&& (positionX < c_HalfWidth + c_TextBoxDimensionX) && (positionY < c_TextBoxPositionY + c_TextBoxDimensionY);
+//}
+
+//void ShowingTheResult(char* currentListOfCharacters)
+//{
+//	std::string resultWithLetters{ CalculationProcess(currentListOfCharacters) };
+//
+//	resultWithLetters[0] = toupper(resultWithLetters[0]);
+//
+//	setbkcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	setfillstyle(SOLID_FILL, COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	setcolor(WHITE);
+//
+//	bgiout << resultWithLetters;
+//	outstreamxy(c_HalfWidth, c_ResultTextBoxPositionY + 42);
+//
+//	//outtextxy(c_HalfWidth, c_ResultTextBoxPositionY + 42, Test2);
+//}
+
+//void CreatingTextBox()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	setbkcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	setfillstyle(SOLID_FILL, COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	bar(c_HalfWidth - c_TextBoxDimensionX, c_TextBoxPositionY, c_HalfWidth + c_TextBoxDimensionX, c_TextBoxPositionY + c_TextBoxDimensionY);
+//
+//	setcolor(WHITE);
+//	//outtextxy(c_HalfWidth, c_TextBoxPositionY + 42, textBoxButtonName);
+//
+//	rectangle((c_HalfWidth - c_TextBoxDimensionX) - 1, (c_TextBoxPositionY) - 1, (c_HalfWidth + c_TextBoxDimensionX) + 1, (c_TextBoxPositionY + c_TextBoxDimensionY) + 1);
+//}
+
+//void WritingOnScreen()
+//{
+//	int startingPosition{ c_HalfWidth - c_TextBoxDimensionX + 25 };
+//	char character{};
+//	std::string list{};
+//
+//	setcolor(WHITE);
+//	setbkcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	settextjustify(CENTER_TEXT, CENTER_TEXT);
+//	settextstyle(10, HORIZ_DIR, 5);
+//	
+//	while (kbhit())
+//	getch();
+//
+//	while (1)
+//	{
+//		character = (char)getch();
+//		if ((character == 27) || (character == 13))
+//			break;
+//
+//		if (character == 8)
+//		{
+//			if (startingPosition >= c_HalfWidth - c_TextBoxDimensionX + 50)
+//			{
+//				startingPosition -= 25;
+//				bgiout << ' ';
+//				outstreamxy(startingPosition, c_TextBoxPositionY + 42);
+//
+//				list.erase(list.size()-1, 1);
+//			}
+//		}
+//		else
+//		{
+//			if (startingPosition <= c_HalfWidth + c_TextBoxDimensionX - 25)
+//			{
+//				bgiout << character;
+//				outstreamxy(startingPosition, c_TextBoxPositionY + 42);
+//				startingPosition += 25;
+//				list += character;
+//			}
+//			else
+//			{
+//				list += character;
+//				list.erase(0, 1);
+//				bgiout << list;
+//				outstreamxy(c_HalfWidth, c_TextBoxPositionY + 42);
+//			}
+//		}
+//	}
+//}
+
+//void CheckingCalculationScreenEvents()
+//{
+//	int positionX{};
+//	int positionY{};
+//	bool onHomeHover{ FALSE };
+//	bool onPlaceholderHover{ FALSE };
+//
+//	while (1)
+//	{
+//		onHomeHover = CheckingHomeHover(onHomeHover);
+//		//onPlaceholderHover = CheckingButtonHover(onPlaceholderHover, c_CalculateButtonPositionY + 350, "SUBMIT");
+//		
+//		if (ismouseclick(WM_LBUTTONDOWN))
+//		{
+//			getmouseclick(WM_LBUTTONDOWN, positionX, positionY);
+//
+//			if ((positionX < 55) && (positionY < 55))
+//				break;
+//			if (CheckingMouseClickPositionValidationForTextBox(positionX, positionY))
+//			{
+//				bar(c_HalfWidth - c_TextBoxDimensionX, c_TextBoxPositionY, c_HalfWidth + c_TextBoxDimensionX, c_TextBoxPositionY + c_TextBoxDimensionY);
+//				WritingOnScreen();
+//			}
+//		}
+//	}
+//}
+
+/*if (CheckingMouseClickPositionValidationForTextBox(positionX, positionY))
+			{
+				bar(c_HalfWidth - c_TextBoxDimensionX, c_TextBoxPositionY, c_HalfWidth + c_TextBoxDimensionX, c_TextBoxPositionY + c_TextBoxDimensionY);
+				WritingOnScreen();
+			}*/
+
+	/*switch (g_Language)
+				{
+				case 1:
+					calculateButtonName = "CALCULATE";
+					settingsButtonName = "SETTINGS";
+					quitButtonName = "QUIT";
+					textBoxButtonName = "Press Here To Type";
+					break;
+				case 2:
+					calculateButtonName = "CALCULEAZA";
+					settingsButtonName = "SETARI";
+					quitButtonName = "IESIRE";
+					textBoxButtonName = "Apasa Aici Ca Sa Scrii";
+					break;
+				}*/
+
+/*if (kbhit())
+	{
+		getch();
+		bgiout << ' ';
+		outstreamxy(c_MaxWidth + 10, c_MaxHeight + 10);
+		outstreamxy(10, 10);
+
+	}*/
+
+	//std::cout << character << '\n' << list << '\n' << '\n';
+
+	//bgiout << character;
+	//getch();
+	//bgiout << ' ';
+	//for (int i{ 0 }; i < 10; i++);
+	//outstreamxy(100, 100);
+	//std::cout << character << '\n' << list << '\n' << '\n';
+
+//list += character;
+//std::cout << list.size() << '\n';
+//list.erase(list.size() - 1, 1);
+//std::cout << list << '\n';
+
+//void HomeScreen()
+//{
+//	initwindow(c_MaxWidth, c_MaxHeight, "Calculator");
+//	readimagefile("Background (2) (Resized).jpg", 0, 0, c_MaxWidth, c_MaxHeight);
+//
+//	DefaultColourSettings(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE);
+//
+//	CreatingImageButtons();
+//	CreatingButtons(c_CalculateButtonPositionY, "CALCULATE");
+//	CreatingButtons(c_SettingsButtonPositionY, "SETTINGS");
+//	CreatingButtons(c_QuitButtonPositionY, "QUIT");
+//
+//	//CheckingHomeScreenEvents();
+//	//WritingOnScreen();
+//
+//	getch();
+//	closegraph();
+//}
+
+//void CheckingHomeScreenEvents()
+//{
+//	int positionX{};
+//	int positionY{};
+//	bool onHomeHover{ FALSE };
+//	bool onCalculateHover{ FALSE };
+//	bool onSettingsHover{ FALSE };
+//	bool onQuitHover{ FALSE };
+//	
+//	while (1)
+//	{
+//		onHomeHover = CheckingHomeHover(onHomeHover);
+//		onCalculateHover = CheckingButtonHover(onCalculateHover, c_CalculateButtonPositionY, "CALCULATE");
+//		onSettingsHover = CheckingButtonHover(onSettingsHover, c_SettingsButtonPositionY, "SETTINGS");
+//		onQuitHover = CheckingButtonHover(onQuitHover, c_QuitButtonPositionY, "QUIT");
+//
+//		if (ismouseclick(WM_LBUTTONDOWN))
+//		{
+//			getmouseclick(WM_LBUTTONDOWN, positionX, positionY);
+//
+//			if (CheckingMouseClickPositionValidation(positionX, positionY, c_CalculateButtonPositionY))
+//			{
+//				CalculationScreen();
+//				break;
+//			}
+//			if (CheckingMouseClickPositionValidation(positionX, positionY, c_SettingsButtonPositionY))
+//			{
+//				closegraph();
+//				break;
+//			}
+//			if (CheckingMouseClickPositionValidation(positionX, positionY, c_QuitButtonPositionY))
+//			{
+//				closegraph();
+//				break;
+//			}
+//		}
+//	}
+//}
+
+/*if ((positionX > c_HalfWidth - c_DefaultButtonDimensionX) && (positionY > c_QuitButtonPositionY)
+	&& (positionX < c_HalfWidth + c_DefaultButtonDimensionX) && (positionY < c_QuitButtonPositionY + c_DefaultButtonDimensionY))
+{
+	closegraph();
+	break;
+}*/
+
+//bool CheckingButtonsHover(bool onButtonHover)
+//{
+//	//Quit
+//	if (!((mousex() > c_HalfWidth - c_DefaultButtonDimensionX) && (mousey() > c_QuitButtonPositionY)
+//		&& (mousex() < c_HalfWidth + c_DefaultButtonDimensionX) && (mousey() < c_QuitButtonPositionY + c_DefaultButtonDimensionY)))
+//	{
+//		if (onButtonHover)
+//		{
+//			DefaultColourSettings(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE);
+//			CreatingButtons(c_QuitButtonPositionY, "QUIT");
+//			onButtonHover = FALSE;
+//		}
+//	}
+//	else
+//	{
+//		if (!onButtonHover)
+//		{
+//			DefaultColourSettings(132, 167, 209);
+//			CreatingButtons(c_QuitButtonPositionY, "QUIT");
+//			onButtonHover = TRUE;
+//		}
+//	}
+//	return onButtonHover;
+//}
+
+//void CheckingHovering()
+//{
+//	while (1)
+//	{
+//		if (!((mousex() < 55) && (mousey() < 55)))
+//			readimagefile("HomeButton (Edited).jpg", 5, 5, 55, 55);
+//		else
+//			readimagefile("HomeButton (Edited) (OnHover).jpg", 5, 5, 55, 55);
+//	}
+//}
+
+//void CheckingLeftClickUp()
+//{
+//	int PositionX, PositionY;
+//	while (1)
+//	{
+//		if (ismouseclick(WM_LBUTTONDOWN))
+//		{
+//			getmouseclick(WM_LBUTTONDOWN, PositionX, PositionY);
+//			if ((PositionX > c_HalfWidth - c_DefaultButtonDimensionX) && (PositionY > c_QuitButtonPositionY)
+//				&& (PositionX < c_HalfWidth + c_DefaultButtonDimensionX) && (PositionY < c_QuitButtonPositionY + c_DefaultButtonDimensionY))
+//			{
+//				closegraph();
+//				break;
+//			}
+//		}
+//	}
+//}
+
+//void CheckingLeftClickUp()
+//{
+//	int PositionX, PositionY;
+//	while (1)
+//	{
+//		while (!ismouseclick(WM_LBUTTONDOWN))
+//		{
+//
+//		}
+//		getmouseclick(WM_LBUTTONDOWN, PositionX, PositionY);
+//		if ((PositionX > c_HalfWidth - c_DefaultButtonDimensionX) && (PositionY > c_QuitButtonPositionY) 
+//			&& (PositionX < c_HalfWidth + c_DefaultButtonDimensionX) && (PositionY < c_QuitButtonPositionY + c_DefaultButtonDimensionY))
+//		{
+//			closegraph();
+//			break;
+//		}
+//	}
+//}
+
+//void CreatingCalculateButton()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	bar(c_HalfWidth-c_DefaultButtonDimensionX, c_CalculateButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_CalculateButtonPositionY + c_DefaultButtonDimensionY);
+//	
+//	setcolor(WHITE);
+//	outtextxy(c_HalfWidth, c_CalculateButtonPositionY + 38, "CALCULATE");
+//
+//	rectangle(c_HalfWidth - c_DefaultButtonDimensionX, c_CalculateButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_CalculateButtonPositionY + c_DefaultButtonDimensionY);
+//}
+//
+//void CreatingSettingsButton()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	bar(c_HalfWidth - c_DefaultButtonDimensionX, c_SettingsButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_SettingsButtonPositionY + c_DefaultButtonDimensionY);
+//
+//	setcolor(WHITE);
+//	outtextxy(c_HalfWidth, c_SettingsButtonPositionY + 38, "SETTINGS");
+//
+//	rectangle(c_HalfWidth - c_DefaultButtonDimensionX, c_SettingsButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_SettingsButtonPositionY + c_DefaultButtonDimensionY);
+//}
+//
+//void CreatingQuitButton()
+//{
+//	setcolor(COLOR(c_ButtonColourRED, c_ButtonColourGREEN, c_ButtonColourBLUE));
+//	bar(c_HalfWidth - c_DefaultButtonDimensionX, c_QuitButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_QuitButtonPositionY + c_DefaultButtonDimensionY);
+//
+//	setcolor(WHITE);
+//	outtextxy(c_HalfWidth, c_QuitButtonPositionY + 38, "QUIT");
+//
+//	rectangle(c_HalfWidth - c_DefaultButtonDimensionX, c_QuitButtonPositionY, c_HalfWidth + c_DefaultButtonDimensionX, c_QuitButtonPositionY + c_DefaultButtonDimensionY);
+//}
+
+//do
+//{
+//	character = (char*) getch();
+//	outtextxy(maxWidth / 2, maxHeight / 2, character);
+//} while ((getch() != 'x') && (getch() != 'X'));
+
+//bgiout << "Hello, World!" << '\n';
+
+//floodfill(1, 1, 15);
+
+//setcolor(WHITE);
+//setfillstyle(SOLID_FILL, WHITE);
+//floodfill(1, 1, WHITE);
+
+/*setcolor(WHITE);
+sector(300, 300, 0, 90, 10, 300);*/
+
+//setbkcolor(RED);
+//bgiout << (char)getch();
+//outstreamxy(100, 100);
+
+//218
+//230
+//242
+//dae6f2
+
+
+
+
+
+
+-----------------------
+
+//std::string CalculationProcess(char* sir)
+//{
+//    std::string rezultatulInLitere{};
+//
+//    citire(sir);
+//    convertor_expresie_matematica();
+//    cout << '\n';
+//    convertor_numar_sir(eval());
+//    cout << '\n';
+//    afisare_ro();
+//    std::string Test{};
+//    rezultatulInLitere = sol;
+//    cout << '\n';
+//    sol.clear();
+//    return rezultatulInLitere;
+//}
+
+//int main() {
+//    bool este_in_romana = true;
+//    if (este_in_romana) {
+//        // initializez "baza de date" necesara pt conversia din cuvinte in numere si din numere in cuvinte
+//        init();
+//        // cat timp citesc o expresie
+//        //while (cin.getline(c, LGMAX)) {
+//        citire();
+//        //convertesc acea expresia scrisa in cuvinte intr-o expresie matematica(cu numere)
+//        //c[strlen(c) - 1] = 0;
+//        p = S;
+//        convertor_expresie_matematica();
+//        cout << '\n';
+//        //evaluez expresia si convertesc rezultatul in cuvinte si il afisez
+//        convertor_numar_sir(eval());
+//        afisare_ro();
+//        cout << '\n';
+//        sol.clear();
+//        memset(S, '0', strlen(S));
+//        //}
+//    }
+//    else {
+//        // initializez "baza de date" necesara pt conversia din cuvinte in numere si din numere in cuvinte
+//        init_en();
+//        //citesc o expresie
+//        //while (cin.getline(c, LGMAX)) {
+//        citire();
+//        //convertesc acea expresia scrisa in cuvinte intr-o expresie matematica(cu numere)
+//        p = S;
+//        //c[strlen(c) - 1] = 0;
+//        convertor_expresie_matematica_en();
+//        cout << '\n';
+//        //evaluez expresia si convertesc rezultatul in cuvinte si il afisez
+//        convertor_numar_sir_en(eval());
+//        afisare_en();
+//        cout << '\n';
+//        sol.clear();
+//        memset(S, '0', strlen(S));
+//        //}
+//    }
+//    return 0;
+//}
+
+//int main() {
+//    bool este_in_romana = false;
+//    if (este_in_romana) {
+//        // initializez "baza de date" necesara pt conversia din cuvinte in numere si din numere in cuvinte
+//        init();
+//        // cat timp citesc o expresie
+//        //while (fin.getline(c, LGMAX)) {
+//        citire();
+//        //convertesc acea expresia scrisa in cuvinte intr-o expresie matematica(cu numere)
+//        //c[strlen(c) - 1] = 0;
+//        convertor_expresie_matematica();
+//        cout << '\n';
+//        //evaluez expresia si convertesc rezultatul in cuvinte si il afisez
+//        convertor_numar_sir(eval());
+//        afisare_ro();
+//        cout << '\n';
+//        sol.clear();
+//        //}
+//    }
+//    else {
+//        // initializez "baza de date" necesara pt conversia din cuvinte in numere si din numere in cuvinte
+//        init_en();
+//        //citesc o expresie
+//        //while (cin.getline(c, LGMAX)) {
+//        citire();
+//        //convertesc acea expresia scrisa in cuvinte intr-o expresie matematica(cu numere)
+//        //c[strlen(c) - 1] = 0;
+//        convertor_expresie_matematica_en();
+//        cout << '\n';
+//        //evaluez expresia si convertesc rezultatul in cuvinte si il afisez
+//        convertor_numar_sir_en(eval());
+//        afisare_en();
+//        cout << '\n';
+//        sol.clear();
+//        //}
+//    }
+//    return 0;
+//}
