@@ -1,5 +1,5 @@
 # Calculator_on_WinBGI
-A calculator that transforms an arithmetical question (string) into the numerical equivalent and it's result, made with the graphical library WinBGI in Visual Studio.
+A calculator with UI that transforms an arithmetical question (string) into the numerical equivalent and it's result, made with the graphical library WinBGI in Visual Studio.
 
 This project was made in colaboration with **Nicu Capatina**, as the final assignment for the programing class (December 2019). I did the graphical part and my peer did the logical part, with some modification made by me for project integration.
 
